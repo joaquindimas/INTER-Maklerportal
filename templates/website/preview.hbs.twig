@@ -48,6 +48,10 @@
             {% block col_one_dropzone %}
 
                 {% for element in colOneContentElements %}
+                    {% include 'bsi-cx-design-master-template-web/templates/shared/content-elements/inter-tabelle/template.twig' %}
+                {% endfor %}
+                
+                {% for element in colOneContentElements %}
                     {% include '@bsi-cx/design-standard-library-web/content-elements/' ~ element ~ '/template.twig' %}
                 {% endfor %}
 

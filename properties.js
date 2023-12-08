@@ -6,9 +6,9 @@ module.exports = {
   /*	                           Colors	                           */
   /* ============================================================= */
 
-  primaryColor: css.color('#16616d'),
-  secondaryColor: css.color('#ff7d00'),
-  darkColor: css.color('#383e42'),
+  primaryColor: css.color('#001b41'),
+  secondaryColor: css.color('#dedc00'),
+  darkColor: css.color('#f2f4f5'),
   lightColor: css.color('#ffffff'),
   infoColor: css.color('#6c757d'),
 
@@ -22,7 +22,7 @@ module.exports = {
 
   // Elements using primaryFontFamily: all elements that do not explicitly have another font assigned to them
   // To change the font family of the following elements, please scroll down and adjust it there: title H1-H3, text
-  primaryFontFamily: 'Open Sans, Segoe UI, Apple SD Gothic Neo, Lucida Grande, Lucida Sans Unicode, sans‑serif',
+  primaryFontFamily: 'Barlow, sans‑serif',
 
 
   /* ============================================================= */
@@ -87,13 +87,13 @@ module.exports = {
   // Secondary color: 'bg-secondary'
   // Dark: 'bg-dark'
   // Light: 'bg-light'
-  footerColor: 'bg-dark',
+  footerColor: 'bg-primary',
 
   /* ---------------------- Footer gradient ---------------------- */
   // From the following choices, select the value that you want to be preselected:
   // Don`t show background gradient: 'default'
   // Show background gradient: 'bg-gradient'
-  footerGradient: 'bg-gradient',
+  footerGradient: 'default',
 
 
   /* ============================================================= */
@@ -162,14 +162,14 @@ module.exports = {
   titleH3Text: '',
 
   /* --------------------- Title font family --------------------- */
-  titleH1FontFamily: 'Open Sans, Segoe UI, Apple SD Gothic Neo, Lucida Grande, Lucida Sans Unicode, sans‑serif',
-  titleH2FontFamily: 'Open Sans, Segoe UI, Apple SD Gothic Neo, Lucida Grande, Lucida Sans Unicode, sans‑serif',
-  titleH3FontFamily: 'Open Sans, Segoe UI, Apple SD Gothic Neo, Lucida Grande, Lucida Sans Unicode, sans‑serif',
+  titleH1FontFamily: 'Barlow, sans‑serif',
+  titleH2FontFamily: 'Barlow, sans‑serif',
+  titleH3FontFamily: 'Barlow, sans‑serif',
 
   /* ---------------------- Title font size ---------------------- */
-  titleH1FontSize: '2.5rem',
-  titleH2FontSize: '2rem',
-  titleH3FontSize: '1.75rem',
+  titleH1FontSize: '2rem',
+  titleH2FontSize: '1.8rem',
+  titleH3FontSize: '1.5rem',
 
   /* ------------------------- Title color ----------------------- */
   // From the following choices, select the value that you want to be preselected:
@@ -194,9 +194,9 @@ module.exports = {
   // Regular: 'fw-bold'
   // Bold: 'fw-light'
   // Light: 'fw-normal'
-  titleH1Weight: 'fw-normal',
-  titleH2Weight: 'fw-normal',
-  titleH3Weight: 'fw-normal',
+  titleH1Weight: 'fw-bold',
+  titleH2Weight: 'fw-bold',
+  titleH3Weight: 'fw-bold',
 
   /* ============================================================= */
   /*	                            Text 	                           */
@@ -207,10 +207,10 @@ module.exports = {
   textContent: '',
 
   /* --------------------- Text font family --------------------- */
-  textFontFamily: 'Open Sans, Segoe UI, Apple SD Gothic Neo, Lucida Grande, Lucida Sans Unicode, sans‑serif',
+  textFontFamily: 'Barlow, sans‑serif',
 
   /* ------------------------ Text color ------------------------ */
-  textColor: css.color('#383e42'),
+  textColor: css.color('#262626'),
 
   /* ---------------------- Text font size ---------------------- */
   textFontSize: '16px',
