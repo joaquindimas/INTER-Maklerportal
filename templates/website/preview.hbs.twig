@@ -16,6 +16,10 @@
     {% include './includes/logo/template.twig' %}
 {% endblock %}
 
+{% block searchbar %}
+    {% include './includes/searchbar/template.twig' %}
+{% endblock %}
+
 {% block header %}
     {% include './includes/header/template.twig' %}
 {% endblock %}
@@ -47,9 +51,7 @@
         {% embed '@bsi-cx/design-standard-library-web/content-elements/layout/col-one/template.twig' %}
             {% block col_one_dropzone %}
 
-                {% for element in colOneContentElements %}
-                    {% include 'bsi-cx-design-master-template-web/templates/shared/content-elements/inter-tabelle/template.twig' %}
-                {% endfor %}
+                {% include '../shared/content-elements/inter-tabelle/template.twig' %}
                 
                 {% for element in colOneContentElements %}
                     {% include '@bsi-cx/design-standard-library-web/content-elements/' ~ element ~ '/template.twig' %}
