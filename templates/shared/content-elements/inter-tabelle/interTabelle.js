@@ -16,12 +16,12 @@ Alpine.data('interTabelle', () => ({
       let allRows = Array.from(this.table.querySelectorAll('tr'));
       allRows.shift();
       allRows.forEach(row => {
-        if (row.innerText.includes(filter)) {
+        let cells = Array.from(row.querySelectorAll('td'));
+        let rowText = cells.map(cell => cell.innerText).join(' ');
+        if (rowText.includes(filter)) {
           row.classList.remove('d-none');
-          console.error("Sichtbar:" + row.innerText);
         } else {
           row.classList.add('d-none');
-          console.error("Unsichtbar:" + row.innerText);
         }
     });
     }
