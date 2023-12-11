@@ -66,7 +66,7 @@ module.exports = {
   logoAlignment: 'bsi-logo-align-left',
 
   /* ------------------------- Logo width ------------------------ */
-  logoWidth: '60px',
+  logoWidth: '127px',
 
 
   /* ============================================================= */
