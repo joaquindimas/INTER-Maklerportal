@@ -1,6 +1,6 @@
 require('./styles/styles.scss');
 
-const {cx, SchemaVersion, Locale} = require('@bsi-cx/design-build');
+const { cx, SchemaVersion, Locale } = require('@bsi-cx/design-build');
 
 module.exports = cx.design
   .withSchemaVersion(SchemaVersion.V_22_0)
@@ -15,12 +15,15 @@ module.exports = cx.design
       .withLabel('Header')
       .withContentElements(
         require('./../shared/content-elements/logo'),
-        require('./../shared/content-elements/header-image')),
+        require('./../shared/content-elements/header-image'),
+        require('./../shared/content-elements/searchfield'),
+      ),
     cx.contentElementGroup
       .withGroupId('layout-EhFpQ7')
       .withLabel('Layout')
       .withContentElements(
-        require('@bsi-cx/design-standard-library-web/content-elements/layout/col-one'),
+        require('@bsi-cx/design-standard-library-web/content-elements/layout/col-one')
+          .withExtendedDropzone('col-one-dropzone-OzGBbS', require('../shared/content-elements/inter-tabelle')),
         require('@bsi-cx/design-standard-library-web/content-elements/layout/col-two'),
         require('@bsi-cx/design-standard-library-web/content-elements/layout/col-three'),
         require('@bsi-cx/design-standard-library-web/content-elements/layout/col-four'),
@@ -46,6 +49,7 @@ module.exports = cx.design
         require('@bsi-cx/design-standard-library-web/content-elements/base/accordion'),
         require('@bsi-cx/design-standard-library-web/content-elements/base/news-snippet'),
         require('@bsi-cx/design-standard-library-web/content-elements/base/table'),
+        require('./../shared/content-elements/inter-tabelle'),
         require('@bsi-cx/design-standard-library-web/content-elements/base/video'),
         require('@bsi-cx/design-standard-library-web/content-elements/base/social-media-follow'),
         require('@bsi-cx/design-standard-library-web/content-elements/base/social-media-share'),
@@ -71,6 +75,7 @@ module.exports = cx.design
       .withMaxNavigationLevel(2)
       .withIncludes(
         require('./includes/navigation'),
+        require('./includes/searchbar'),
         require('./includes/logo'),
         require('./includes/header'),
         require('./includes/page'),

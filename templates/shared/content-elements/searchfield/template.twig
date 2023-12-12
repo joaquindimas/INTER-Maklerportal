@@ -1,0 +1,27 @@
+<div data-bsi-element="searchfield-NZcj1s" class="searchfield-NZcj1s" x-data="formElement">
+	<form data-bsi-element-part="searchfield-form-N4X7Y0" @submit="submitForm" x-data="searchfield" id="search" x-init="initForm" data-bsi-show-form-type-field novalidate>
+		<div data-bsi-element-part="searchfield-input-NEWehM">
+			<label class="d-none" for="searchValue"></label>
+			<input type="text" placeholder="Suche" id="searchValue" @keydown.enter="submitForm">
+			<div class="d-none">
+				<div class="invalid-feedback">
+					<label role="alert" aria-live="assertive" aria-atomic="true"></label>
+				</div>
+				<div class="format-invalid-feedback" hidden="true" aria-hidden="true">
+					<label class="errormessage-invalid" role="alert" aria-live="assertive" aria-atomic="true"></label>
+				</div>
+			</div>
+		</div>
+        {# <div data-bsi-dropzone="searchfield-dropzone">
+            {% include "@bsi-cx/design-standard-library-web/content-elements/form/form-field/template.twig" %}
+        </div> #}
+		<label for="submit">
+			<i class="bi bi-search"></i>
+		</label>
+		<input type="submit" id="submit" class="d-none">
+		<input type="reset" id="submit" class="d-none">
+		<div data-bsi-form-validation class="d-none">
+			<div data-bsi-form-validation-item></div>
+		</div>
+	</form>
+</div>

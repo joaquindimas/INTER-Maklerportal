@@ -1,19 +1,35 @@
 import Alpine from 'alpinejs';
 
-Alpine.data('filterTabelle', () => ({
-    init() {
-        // show only first 20 rows
-        this.$root // div, wo x-data definiert ist
-        this.$root.querySelector('table');
-    },
-    filterTable(searchEvent) {
-        // filter Table
-        this.$el // input-element, auf dem die function aufgerufen wird
-        this.$el.value;
-    },
+Alpine.data('interTabelle', () => ({
+  table: null,
+  init() {
+    // show only first 20 rows
+    this.$root // div, wo x-data definiert ist
+    this.table = this.$root.querySelector('table');
+  },
+  filterTabelle() {
+    // filter Table
+    let filter = this.$el.innerText // input-element, auf dem die function aufgerufen wird
+    // this.$el.value;
+    if (filter) {
+      console.error('Filter: ' + this.$el.innerText);
+      let allRows = Array.from(this.table.querySelectorAll('tr'));
+      allRows.shift();
+      allRows.forEach(row => {
+        let cells = Array.from(row.querySelectorAll('td'));
+        let rowText = cells.map(cell => cell.innerText).join(' ');
+        if (rowText.includes(filter)) {
+          row.classList.remove('d-none');
+        } else {
+          row.classList.add('d-none');
+        }
+    });
+    }
+  },
 
   // Set header text to td:before for reverse table on mobile screens
-  setHeaderTableMobile(table) {
+  setHeaderTableMobile() {
+    let table = this.$el;
     let header = table.getElementsByTagName('th');
     let data = table.getElementsByTagName('td');
 

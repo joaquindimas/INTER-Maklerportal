@@ -1,1 +1,3 @@
-import '../content-elements/filter-tabelle/filterTabelle';
+import '../content-elements/inter-tabelle/interTabelle';
+import '../content-elements/searchfield/searchfield';
+
