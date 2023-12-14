@@ -1,35 +1,16 @@
-<div data-bsi-element="inter-tabelle-217858" class="inter-tabelle-217858 bsi-element-table-FuXKu7 content-element bsi-table-secondary mb-3" x-data="interTabelle">
-	<div class="search-div d-none" style="background-color:red; height:100px;">
-		<div x-init="filterTabelle" data-bsi-element-part="inter-tabelle-filter-text-uYjVGH">Moin</div>
+<div data-bsi-element="inter-tabelle-217858" class="inter-tabelle-217858 bsi-element-table-FuXKu7 content-element bsi-table-primary mb-3 show-search-filter" x-data="interTabelle">
+	<div class="parameters d-none">
+		<div x-init="initFilter" data-bsi-element-part="inter-tabelle-filter-text-uYjVGH">in</div>
+		<div x-init="initPagination" data-bsi-element-part="inter-tabelle-pagination-size-vamlqE">10</div>
+	</div>
+	<div class="search-div">
+		<input type="text" x-on:change="filterTabelle">
+		<i class="bi bi-search"></i>
 	</div>
 	<div data-bsi-element-part="inter-tabelle-tabelle-403312">
-		<table x-init="setHeaderTableMobile" class="table table-hover">
-			<tbody>
-				<tr>
-					<th>#</th>
-					<th>Title 1</th>
-					<th>Title</th>
-					<th>Title 3</th>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>Moin</td>
-					<td>zusammen</td>
-					<td>!</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>Ups</td>
-					<td>Text 2</td>
-					<td>Text 3</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>Wow,</td>
-					<td>ein</td>
-					<td>Text 3</td>
-				</tr>
-			</tbody>
+		<table x-init="setHeaderTableMobile" class="table table-hover init">
+			{% include "./example-data-50.html" %}
 		</table>
 	</div>
+	<div class="pages"></div>
 </div>
