@@ -1,0 +1,102 @@
+.inter-tabelle-217858 {
+    &.show-search-filter .search-div {
+        display: flex;
+
+        input {
+            padding: 0.5rem;
+            // border-radius: 0.8rem 0.8rem 0 0;
+            border: 2px solid bsiProperty('secondaryColor', #dedc00);
+            width: 100%;
+            outline-color: bsiProperty('secondaryColor', #dedc00)
+        }
+
+        i {
+            position: relative;
+            top: 0.5rem;
+            right: 1.5rem;
+            width: 0;
+        }
+    }
+
+    .search-div,
+    .init {
+        display: none;
+    }
+
+    th {
+        &.sort-asc:after {
+            content: '▼';
+            padding-left: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        &.sort-desc::after {
+            content: '▲';
+            padding-left: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+    }
+
+    tr {
+
+        &.filter-hide,
+        &.pagination-hide {
+            display: none;
+        }
+
+    }
+
+    .pages {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        flex-direction: row;
+        justify-content: end;
+        padding: 0.4rem 1rem;
+
+        a {
+            text-decoration: underline;
+            cursor: pointer;
+
+            &.active {
+                font-weight: bold;
+                font-size: 0.9rem;
+            }
+
+            &:hover {
+                color: bsiProperty('primaryColor', #000);
+                text-decoration: underline;
+            }
+        }
+
+        &::before {
+            content: "Ergebnisse: "
+        }
+
+        &.hide {
+            display: none;
+        }
+    }
+
+    &.bsi-table-primary {
+        &.show-search-filter .search-div input {
+
+            border: 2px solid bsiProperty('primaryColor', #dedc00);
+            outline-color: bsiProperty('primaryColor', #dedc00)
+        }
+
+        .pages {
+            color: #fff;
+            a{
+                color: #fff;
+                &:hover {
+                    color: bsiProperty('secondaryColor', #dedc00);
+                }
+            }
+        }
+    }
+}
+.bsi-ce-edit-mode .inter-tabelle-217858 table.init{
+    display: table;
+}
